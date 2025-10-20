@@ -1,0 +1,14 @@
+services:
+  http-server:
+    build: http_server
+    volumes:
+      - ./flag.txt:/flag.txt:ro
+    #cap_add:
+    #  - SYS_PTRACE
+    ports:
+      - 8080:8080
+    networks:
+      default:
+
+networks:
+  default:
